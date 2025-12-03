@@ -1,0 +1,7 @@
+
+body { background:#F3F1FF; font-family:'Poppins',sans-serif; }
+.navbar-custom { background:linear-gradient(45deg,#6A5ACD,#7B68EE); padding:14px; }
+.nav-link-custom { color:white; margin-left:15px; text-decoration:none; font-weight:500; }
+.card-custom { background:white; border-radius:12px; border-left:6px solid #6A5ACD;
+ box-shadow:0 6px 20px rgba(0,0,0,0.08); }
+.card-login { width:380px; border-radius:12px; }

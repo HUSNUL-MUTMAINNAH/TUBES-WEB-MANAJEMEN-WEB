@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Pembayaran</title>
+<link rel='stylesheet' href='assets/css/style.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css'>
+</head>
+<body onload='renderBayar();'>
+<div class='navbar-custom'>
+ <div class='container d-flex justify-content-between'>
+   <h4 class='text-white'>Sistem Manajemen Kos</h4>
+   <div>
+     <a class='nav-link-custom' href='dashboard.html'>Dashboard</a>
+     <a class='nav-link-custom' href='kamar.html'>Kamar</a>
+     <a class='nav-link-custom' href='penyewa.html'>Penyewa</a>
+     <a class='nav-link-custom' href='index.html' onclick='logout()'>Logout</a>
+   </div>
+ </div>
+</div>
+
+<div class='container mt-4'>
+ <div class='d-flex justify-content-between mb-3'>
+   <h4>Data Pembayaran</h4>
+   <button class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#modalBayar'>Tambah Pembayaran</button>
+ </div>
+
+ <table class='table table-striped'>
+   <thead><tr><th>#</th><th>Nama</th><th>Jumlah</th><th>Metode</th><th>Aksi</th></tr></thead>
+   <tbody id='tableBayar'></tbody>
+ </table>
+</div>
+
+<div class='modal fade' id='modalBayar'>
+ <div class='modal-dialog'>
+   <form class='modal-content' onsubmit='addBayar();return false;'>
+     <div class='modal-header'><h5>Tambah Pembayaran</h5></div>
+     <div class='modal-body'>
+       <input id='bayarNama' class='form-control mb-2' placeholder='Nama Penyewa'>
+       <input id='bayarJumlah' class='form-control mb-2' placeholder='Jumlah' type='number'>
+       <input id='bayarMetode' class='form-control mb-2' value='Transfer'>
+     </div>
+     <div class='modal-footer'><button class='btn btn-primary'>Simpan</button></div>
+   </form>
+ </div>
+</div>
+
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js'></script>
+<script src='assets/js/auth.js'></script>
+<script src='assets/js/pembayaran.js'></script>
+</body>
+</html>

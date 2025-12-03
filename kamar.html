@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Kamar</title>
+<link rel='stylesheet' href='assets/css/style.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css'>
+</head>
+<body onload='renderKamar();'>
+<div class='navbar-custom'>
+ <div class='container d-flex justify-content-between'>
+   <h4 class='text-white'>Sistem Manajemen Kos</h4>
+   <div>
+     <a class='nav-link-custom' href='dashboard.html'>Dashboard</a>
+     <a class='nav-link-custom' href='penyewa.html'>Penyewa</a>
+     <a class='nav-link-custom' href='pembayaran.html'>Pembayaran</a>
+     <a class='nav-link-custom' href='index.html' onclick='logout()'>Logout</a>
+   </div>
+ </div>
+</div>
+
+<div class='container mt-4'>
+ <div class='d-flex justify-content-between mb-3'>
+   <h4>Data Kamar</h4>
+   <button class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#modalKamar'>Tambah Kamar</button>
+ </div>
+
+ <table class='table table-striped'>
+   <thead><tr><th>#</th><th>Nomor</th><th>Tipe</th><th>Harga</th><th>Status</th><th>Aksi</th></tr></thead>
+   <tbody id='tableKamar'></tbody>
+ </table>
+</div>
+
+<div class='modal fade' id='modalKamar'>
+ <div class='modal-dialog'>
+   <form class='modal-content' onsubmit='addKamar();return false;'>
+     <div class='modal-header'><h5>Tambah Kamar</h5></div>
+     <div class='modal-body'>
+       <input id='kamarNomor' class='form-control mb-2' placeholder='Nomor Kamar'>
+       <input id='kamarTipe' class='form-control mb-2' placeholder='Tipe'>
+       <input id='kamarHarga' class='form-control mb-2' placeholder='Harga' type='number'>
+     </div>
+     <div class='modal-footer'><button class='btn btn-primary'>Simpan</button></div>
+   </form>
+ </div>
+</div>
+
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js'></script>
+<script src='assets/js/auth.js'></script>
+<script src='assets/js/kamar.js'></script>
+</body>
+</html>
